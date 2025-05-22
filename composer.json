@@ -1,0 +1,25 @@
+{
+    "name": "maniyatech/magento2-adminlogo",
+    "description": "Easily personalize the Magento admin interface with custom logos and titles.",
+    "require": {
+        "maniyatech/module-core": "*"
+    },
+    "type": "magento2-module",
+    "license": "proprietary",
+    "version": "1.0.0",
+    "authors": [
+        {
+          "name": "ManiyaTech",
+          "email": "help.maniyatech@gmail.com",
+          "role": "Technical Support"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ManiyaTech\\AdminLogo\\": ""
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_AdminLogo
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="ManiyaTech_AdminLogo::main" title="Admin Logo" translate="Admin Logo" module="ManiyaTech_AdminLogo" parent="ManiyaTech_Core::core" sortOrder="10" resource="ManiyaTech_AdminLogo::main" dependsOnConfig="adminlogo/general/enabled"/>
+
+        <add id="ManiyaTech_AdminLogo::configuration_menu" title="Configurations" module="ManiyaTech_AdminLogo" parent="ManiyaTech_AdminLogo::main" sortOrder="20" action="admin/system_config/edit/section/adminlogo" resource="ManiyaTech_AdminLogo::configuration_menu" target="_blank"/>
+    </menu>
+</config>

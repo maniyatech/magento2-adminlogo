@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_AdminLogo
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <adminlogo>
+            <general>
+                <enabled>1</enabled>
+                <logo_title>Magento Admin Panel</logo_title>
+                <login_page_logo>admin-logo.jpg</login_page_logo>
+                <menu_logo>menu-logo.ico</menu_logo>
+            </general>
+        </adminlogo>
+    </default>
+</config>

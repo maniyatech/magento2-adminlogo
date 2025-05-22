@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_AdminLogo
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="adminlogo" showInDefault="1" showInWebsite="0" showInStore="0" sortOrder="10">
+            <label>Admin Logo</label>
+            <tab>maniyatech</tab>
+            <resource>ManiyaTech_AdminLogo::config_adminlogo</resource>
+            <group id="general" showInDefault="1" showInWebsite="0" showInStore="0" sortOrder="10">
+                <label>General Settings</label>
+                <field id="enabled" translate="Enable Module" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="logo_title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Logo Title</label>
+                    <depends><field id="enabled">1</field></depends>
+                </field>
+                <field id="login_page_logo" translate="label" type="image" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Admin Login page Logo</label>
+                    <backend_model>ManiyaTech\AdminLogo\Model\Config\Backend\LoginLogo</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">ManiyaTech/Adminlogo</upload_dir>
+                    <base_url type="media" scope_info="1">ManiyaTech/Adminlogo</base_url>
+                    <depends><field id="enabled">1</field></depends>
+                </field>
+                <field id="menu_logo" translate="label" type="image" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Admin Menubar Logo</label>
+                    <backend_model>ManiyaTech\AdminLogo\Model\Config\Backend\MenuLogo</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">ManiyaTech/Adminlogo</upload_dir>
+                    <base_url type="media" scope_info="1">ManiyaTech/Adminlogo</base_url>
+                    <depends><field id="enabled">1</field></depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

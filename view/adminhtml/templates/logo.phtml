@@ -1,0 +1,42 @@
+<?php
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_AdminLogo
+ */
+
+/** @var \ManiyaTech\AdminLogo\ViewModel\AdminLogo $viewModel */
+$viewModel = $block->getViewModel();
+
+$editionAttr = $block->hasEdition()
+    ? 'data-edition="' . $escaper->escapeHtml($block->getEdition()) . '"'
+    : '';
+
+$defaultLogoSrc = $block->hasLogoImageSrc()
+    ? $escaper->escapeHtml($block->getLogoImageSrc())
+    : 'images/magento-logo.svg';
+
+$customLogoSrc = '';
+$title = __('Magento Admin Panel');
+
+if ($viewModel->isEnabled()) {
+    $logoTitle = $viewModel->getLogoTitle();
+    if ($logoTitle) {
+        $title = __($logoTitle);
+    }
+
+    $customLogoSrc = $viewModel->getAdminLoginPageLogo();
+}
+
+$logoSrc = $customLogoSrc ?: $block->getViewFileUrl($defaultLogoSrc);
+?>
+<a href="<?= $escaper->escapeUrl($block->getHomeLink()) ?>"
+   <?= /* @noEscape */ $editionAttr ?>
+   class="logo">
+    <img class="logo-img"
+         src="<?= $escaper->escapeUrl($logoSrc) ?>"
+         alt="<?= $escaper->escapeHtml($title) ?>"
+         title="<?= $escaper->escapeHtml($title) ?>" />
+</a>
+
