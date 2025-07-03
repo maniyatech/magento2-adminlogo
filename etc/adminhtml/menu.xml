@@ -12,6 +12,6 @@
     <menu>
     	<add id="ManiyaTech_AdminLogo::main" title="Admin Logo" translate="Admin Logo" module="ManiyaTech_AdminLogo" parent="ManiyaTech_Core::core" sortOrder="10" resource="ManiyaTech_AdminLogo::main" dependsOnConfig="adminlogo/general/enabled"/>
 
-        <add id="ManiyaTech_AdminLogo::configuration_menu" title="Configurations" module="ManiyaTech_AdminLogo" parent="ManiyaTech_AdminLogo::main" sortOrder="20" action="admin/system_config/edit/section/adminlogo" resource="ManiyaTech_AdminLogo::configuration_menu" target="_blank"/>
+        <add id="ManiyaTech_AdminLogo::configuration_menu" title="Configurations" module="ManiyaTech_AdminLogo" parent="ManiyaTech_AdminLogo::main" sortOrder="10" action="admin/system_config/edit/section/adminlogo" resource="ManiyaTech_AdminLogo::configuration_menu" target="_blank"/>
     </menu>
 </config>

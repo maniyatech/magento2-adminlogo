@@ -16,6 +16,10 @@
             <resource>ManiyaTech_AdminLogo::config_adminlogo</resource>
             <group id="general" showInDefault="1" showInWebsite="0" showInStore="0" sortOrder="10">
                 <label>General Settings</label>
+                <field id="ManiyaTech_AdminLogo" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Composer Version</label>
+                    <frontend_model>ManiyaTech\Core\Block\Adminhtml\System\Config\Composer\Version</frontend_model>
+                </field>
                 <field id="enabled" translate="Enable Module" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
                     <label>Enable Module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
